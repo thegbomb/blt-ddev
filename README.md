@@ -4,7 +4,7 @@ Acquia BLT integration with ddev
 This is an [Acquia BLT](https://github.com/acquia/blt) plugin providing [ddev](https://ddev.readthedocs.io) integration.
 
 This plugin is **community-created** and **community-supported**. Acquia does not provide any direct support for this software or provide any warranty as to its stability.
-
+This has been forked from https://github.com/lcatlett/blt-ddev and updated to keep it installing.
 
 ## Quickstart
 
@@ -14,20 +14,20 @@ To create a new BLT project with ddev integration for local development, run the
 composer create-project --no-interaction --no-install drupal/recommended-project mysite
 cd mysite
 sudo sed -i '' -e "s|web/|docroot/|g" composer.json
-composer require --dev lcatlett/blt-ddev
+composer require --dev thegbomb/blt-ddev
 blt recipes:ddev --no-interaction
 ddev blt setup
 ```
 
 ## Installation and usage
 
-To use this plugin on your existing BLT 12 project, you must be using ddev [v1.10.0](https://github.com/drud/ddev/releases/tag/v1.10.0) or newer.
+To use this plugin on your existing BLT 13 project, you must be using ddev [v1.10.0](https://github.com/drud/ddev/releases/tag/v1.10.0) or newer.
 
 You can check your version of ddev with `ddev version`.
 
 In your project, require the plugin with Composer:
 
-`composer require --dev lcatlett/blt-ddev`
+`composer require --dev thegbomb/blt-ddev`
 
 Initialize the ddev integration by calling `recipes:ddev`, which is a custom BLT command provided by this plugin:
 

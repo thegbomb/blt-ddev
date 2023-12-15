@@ -1,13 +1,13 @@
 {
-  "name": "lcatlett/blt-ddev",
+  "name": "thegbomb/blt-ddev",
     "type": "library",
     "description": "ddev integration for Acquia BLT",
     "keywords": ["acquia", "blt","ddev"],
-    "homepage": "https://github.com/lcatlett/blt-ddev",
+    "homepage": "https://github.com/thegbomb/blt-ddev",
     "license": "MIT",
     "authors": [
         {
-            "name": "Lindsey Catlett",
+            "name": "Gareth Alexander",
             "role": "Maintainer"
         }
     ],
@@ -17,7 +17,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Lcatlett\\BltDdev\\": "./src/"
+      "Thegbomb\\BltDdev\\": "./src/"
     }
   }
 }
