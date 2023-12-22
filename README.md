@@ -13,7 +13,7 @@ To create a new BLT project with ddev integration for local development, run the
 ```
 composer create-project --no-interaction --no-install drupal/recommended-project mysite
 cd mysite
-sudo sed -i '' -e "s|web/|docroot/|g" composer.json
+sed -i '' -e "s|web/|docroot/|g" composer.json
 composer require --dev thegbomb/blt-ddev
 blt recipes:ddev --no-interaction
 ddev blt setup
