@@ -1,6 +1,6 @@
 <?php
 
-namespace Lcatlett\BltDdev\Blt\Plugin\Commands;
+namespace thegbomb\BltDdev\Blt\Plugin\Commands;
 
 use Acquia\Blt\Robo\BltTasks;
 use Acquia\Blt\Robo\Exceptions\BltException;
@@ -19,7 +19,7 @@ class DdevCommand extends BltTasks {
    */
   public function ddevProjectInit() {
     // Copy .ddev folder from template into the current project root.
-    $result = $this->taskCopyDir([$this->getConfigValue('repo.root') . '/vendor/lcatlett/blt-ddev/config/.ddev' => $this->getConfigValue('repo.root') . '/.ddev'])
+    $result = $this->taskCopyDir([$this->getConfigValue('repo.root') . '/vendor/thegbomb/blt-ddev/config/.ddev' => $this->getConfigValue('repo.root') . '/.ddev'])
       ->setVerbosityThreshold(VerbosityThresholdInterface::VERBOSITY_VERBOSE)
       ->run();
 
@@ -29,7 +29,7 @@ class DdevCommand extends BltTasks {
 
     // Copy BLT local config template (aka example.local.blt.yml).
     $result = $this->taskFilesystemStack()
-      ->copy($this->getConfigValue('repo.root') . '/vendor/lcatlett/blt-ddev/config/blt/example.local.blt.yml', $this->getConfigValue('repo.root') . '/blt/example.local.blt.yml', true)
+      ->copy($this->getConfigValue('repo.root') . '/vendor/thegbomb/blt-ddev/config/blt/example.local.blt.yml', $this->getConfigValue('repo.root') . '/blt/example.local.blt.yml', true)
       ->setVerbosityThreshold(VerbosityThresholdInterface::VERBOSITY_VERBOSE)
       ->run();
 
