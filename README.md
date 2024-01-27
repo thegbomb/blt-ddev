@@ -15,7 +15,7 @@ composer create-project --no-interaction --no-install drupal/recommended-project
 cd mysite
 sed -i '' -e "s|web/|docroot/|g" composer.json
 composer require --dev thegbomb/blt-ddev
-blt recipes:ddev --no-interaction
+./vendor/bin/blt recipes:ddev --no-interaction
 ddev blt setup
 ```
 
